@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ------------------------------js------------------------- -->
+    <script>
+        function handleCheck(clickedCheckbox) {
+            if (clickedCheckbox.id === 'none') {
+                if (clickedCheckbox.checked) {
+                    document.getElementById('smoking').checked = false;
+                    document.getElementById('alcohol').checked = false;
+                }
+            } else {
+                if (clickedCheckbox.checked) {
+                    document.getElementById('none').checked = false;
+                }
+            }
+        }
+    </script>
+
+    <!-- -------------------------------aside column-------------------------------------- -->
+
+<div class="container-section-total">
+    <div class="container-section">
+        <div class="container-one">
+            <h3>Quick links</h3>
+            <ul class="aside-forms">
+                <a href="#interview-form"><li>Interview Form</li></a>
+                <a href="#school-college-education"><li>School & College Education</li></a>
+                <a href="#latest-employment-details"><li>Latest Employment details</li></a>
+                <a href="#family"><li>Family</li></a>
+                <a href="#children"><li>Children</li></a>
+                <a href="#health-issues"><li>Health-issues</li></a>
+                <a href="#reference-details"><li>Reference details</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <!-- --------------------------side column one---------------------------------------- -->
+    
+    <div class="container-section-two">
+
+        <div id="interview-form" class="container-two">
+            <h2 class="container-two-header-one">Interview Form</h2>
+            <form class="three-column-form" action="/submit" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="position-applied-for">Position Applied for</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="dob">DOB:</label><br>
+                    <input type="date" id="dob" name="dob"><br><br>
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Male" name="Type" value="Male">
+                        <label for="Male">Male</label>
+                        <input type="radio" id="Female" name="Type" value="Female">
+                        <label for="Female">Female</label>
+                        <input type="radio" id="Others" name="Type" value="Others">
+                        <label for="Others">Others</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mother-tongue">Mother tongue</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="languages-known">Languages known</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="birthplace">Birthplace</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="religion">Religion</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="caste">Caste:</label>
+                    </div> 
+                    <div>
+                        <input type="radio" id="oc" name="caste" value="oc">
+                        <label for="oc">OC</label>
+                        <input type="radio" id="bc" name="caste" value="bc">
+                        <label for="bc">BC</label>
+                        <input type="radio" id="mbc" name="caste" value="mbc">
+                        <label for="mbc">MBC</label><br>
+                        <input type="radio" id="other" name="caste" value="others">
+                        <label for="others">Others</label><br><br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="martial-status">Married / Single / Separated</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="two-wheeler">Two Wheeler:</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="yes" name="two-wheeler" value="yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="two-wheeler" value="no">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:(Own/Rented)</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="mobilenumber">Mobile:</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label><br>
+                    <input type="text" id="text" name="text"><br><br>
+                </div>
+            </form>
+        </div>
+    
+    <!-- -------------------------------------side column two------------------------- -->
+    
+        <div id="school-college-education" class="container-three">
+            <h2 class="container-two-header-one">School & College Education:</h2>
+            <form>
+                <div class="form-group-two">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Degree</th>
+                                <th>College</th>
+                                <th>Full Time/Distance</th>
+                                <th>Year of passing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="degree-12th" value="12th" readonly></td>
+                                <td><input type="text" name="college-12th"></td>
+                                <td><input type="text" name="fulltime-distance-12th"></td>
+                                <td><input type="text" name="year-12th"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="degree-1"></td>
+                                <td><input type="text" name="college-1"></td>
+                                <td><input type="text" name="fulltime-distance-1"></td>
+                                <td><input type="text" name="year-1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="degree-2"></td>
+                                <td><input type="text" name="college-2"></td>
+                                <td><input type="text" name="fulltime-distance-2"></td>
+                                <td><input type="text" name="year-2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    
+    
+    <!-- ------------------------------side column three----------------------------- -->
+        
+        <div id="latest-employment-details" class="container-three">
+            <h2 class="container-two-header-one">Latest Employment details (start with latest)</h2>
+            <form>
+                <div class="form-group-two">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year of leaving</th>
+                                <th>Work duration in months/yrs</th>
+                                <th>Company</th>
+                                <th>Position</th>
+                                <th>Reason for leaving</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="company"></td>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="company"></td>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="company"></td>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    
+    
+    <!-- --------------------------side column four------------------------------ -->
+        <div id="family" class="container-three">
+            <h2 class="container-two-header-one">Family</h2>
+            <form>
+                <div class="form-group-two">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Name of the relation</th>
+                                <th>Job & Company</th>
+                                <th>Mobile number</th>
+                            </tr>                  
+                            <tr>
+                                <th>Father</th>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                            <tr>
+                                <th>Mother</th>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                            <tr>
+                                <th>Husband / Wife</th>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                            <tr>
+                                <th>Brother</th>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                            <tr>
+                                <th>Sister</th>
+                                <td><input type="text" name="position"></td>
+                                <td><input type="text" name="position"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    
+    
+    <!-- --------------------------side column five------------------------------ -->
+        
+        <div  id="children" class="container-three">
+            <h2 class="container-two-header-one">Children</h2>
+            <form>
+                <div class="form-group-two">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name, Age & Sex</th>
+                                <th>School / College</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    
+        <!-- -------------------------------------side column six--------------------------- -->
+
+        <div id="health-issues" class="container-three">
+            <h2 class="container-two-header-one">Health issues</h2>
+            <form class="three-column-form" action="/submit" method="post">
+                <div class="form-group">
+                    <label for="health-issues">Health issues</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="habits">Habits</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="smoking" name="habits" value="smoking" onclick="handleCheck(this)">
+                        <label for="smoking">Smoking </label>
+                        <input type="checkbox" id="alcohol" name="habits" value="alcohol" onclick="handleCheck(this)">
+                        <label for="alcohol">Alcohol</label>
+                        <input type="checkbox" id="none" name="habits" value="none" onclick="handleCheck(this)">
+                        <label for="none">None</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="identification-marks">Identification marks</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="criminal-case">Any criminal cases pending with details</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="criminal-case">If selected, which date would you like to join ?</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="criminal-case">How many years are you willing to work ?</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="habits">Willing to give the original degree certificate / Caution Deposit from salary ? (select one)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="smoking" name="Type" value="smoking">
+                        <label for="smoking">Original degree</label><br>
+                        <input type="radio" id="alcohol" name="Type" value="alcohol">
+                        <label for="alcohol">Caution Deposit</label>
+                        <input type="radio" id="none" name="Type" value="none">
+                        <label for="none">Both</label><br>
+                        <input type="radio" id="none" name="Type" value="none">
+                        <label for="none">None</label>
+                    </div>   
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="habits">Willing to relocate to other branches if needed  (Temporary / Permanent)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="smoking" name="Type" value="smoking">
+                        <label for="smoking">Yes</label>
+                        <input type="radio" id="alcohol" name="Type" value="alcohol">
+                        <label for="alcohol">No</label>
+                    </div>
+                </div>
+                <div class="select">
+                    <div>
+                        <label for="habits">Willing to work in night shift</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="smoking" name="Type" value="smoking">
+                        <label for="smoking">Yes</label>
+                        <input type="radio" id="alcohol" name="Type" value="alcohol">
+                        <label for="alcohol">No</label>
+                    </div>  
+                </div>
+                
+
+
+            </form>
+        </div>
+
+
+        <!-- ----------------------------------------side column seven----------------------------- -->
+    
+        <div id="reference-details" class="container-three">
+            <h1 class="container-two-header-one">Reference details</h1>
+            <form>
+                <div class="form-group-two">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Designation</th>
+                                <th>Company</th>
+                                <th>Phone number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="work-duration"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="work-duration"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="year-of-leaving"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="work-duration"></td>
+                                <td><input type="text" name="work-duration"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+        <!-- --------------------------------------last para----------------------------- -->
+
+        <div class="container-para">
+            <div>
+                <p>
+                    I hereby declare that the information furnished above is true, complete and correct to the
+                    best of my knowledge and belief. I understand that in the event of my information being
+                    found false or incorrect at any stage, my candidature / appointment shall be liable to
+                    cancellation / termination without notice or any compensation in lieu thereof.
+                </p>
+            </div>
+            <div calss="signature">
+                <label for="name">Name</label>
+                <input type="text">
+                <label for="sign">Sign</label>
+                <input type="text">
+                <label for="sign">Date</label>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
